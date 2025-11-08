@@ -357,7 +357,7 @@ function updateTimeline() {
     }, 200);
 }
 
-// Save to localStorage
+// Save to Firebase (and localStorage as backup)
 function saveToLocalStorage() {
     const pagePath = window.location.pathname;
     const pageName = pagePath.split('/').pop() || 'index.html';
@@ -371,56 +371,97 @@ function saveToLocalStorage() {
         return { time, description, link };
     });
     
+    // Save to localStorage as backup
     localStorage.setItem(`timeline_${pageName}`, JSON.stringify(items));
+    
+    // Save to Firebase for real-time sharing
+    if (typeof db !== 'undefined' && db) {
+        db.collection('timeline').doc(pageName).set({
+            items: items,
+            updatedAt: firebase.firestore.FieldValue.serverTimestamp()
+        }).catch(error => {
+            console.error('Error saving to Firebase:', error);
+        });
+    }
 }
 
-// Load from localStorage
+// Load from Firebase (with localStorage fallback)
 function loadSavedChanges() {
     const pagePath = window.location.pathname;
     const pageName = pagePath.split('/').pop() || 'index.html';
     
+    // Try to load from Firebase first
+    if (typeof db !== 'undefined' && db) {
+        db.collection('timeline').doc(pageName).onSnapshot((doc) => {
+            if (doc.exists()) {
+                const data = doc.data();
+                if (data.items && data.items.length > 0) {
+                    renderTimelineItems(data.items);
+                    return;
+                }
+            }
+            // If Firebase doesn't have data, try localStorage
+            loadFromLocalStorage(pageName);
+        }, (error) => {
+            console.error('Error loading from Firebase:', error);
+            // Fallback to localStorage
+            loadFromLocalStorage(pageName);
+        });
+    } else {
+        // Firebase not available, use localStorage
+        loadFromLocalStorage(pageName);
+    }
+}
+
+// Load from localStorage (fallback)
+function loadFromLocalStorage(pageName) {
     const saved = localStorage.getItem(`timeline_${pageName}`);
     if (!saved) return;
     
     try {
         const items = JSON.parse(saved);
-        const container = document.querySelector('.timeline-container');
-        if (!container) return;
-        
-        // Clear existing items
-        const existingItems = container.querySelectorAll('.timeline-item');
-        existingItems.forEach(item => item.remove());
-        
-        // Add saved items
-        items.forEach(itemData => {
-            const newItem = document.createElement('div');
-            newItem.className = 'timeline-item';
-            
-            let linkHtml = '';
-            if (itemData.link) {
-                linkHtml = `<a href="${itemData.link}" target="_blank" class="timeline-link">פתח ב-Google Maps</a>`;
-            }
-            
-            newItem.innerHTML = `
-                <div class="timeline-dot"></div>
-                <div class="timeline-time">${itemData.time}</div>
-                <div class="timeline-content">
-                    <p>${itemData.description}</p>
-                    ${linkHtml}
-                </div>
-            `;
-            
-            const timelineLine = container.querySelector('.timeline-line');
-            timelineLine.insertAdjacentElement('afterend', newItem);
-        });
-        
-        // Update timeline after loading
-        setTimeout(() => {
-            updateTimeline();
-        }, 200);
+        renderTimelineItems(items);
     } catch (e) {
-        console.error('Error loading saved changes:', e);
+        console.error('Error loading from localStorage:', e);
     }
+}
+
+// Render timeline items
+function renderTimelineItems(items) {
+    const container = document.querySelector('.timeline-container');
+    if (!container) return;
+    
+    // Clear existing items
+    const existingItems = container.querySelectorAll('.timeline-item');
+    existingItems.forEach(item => item.remove());
+    
+    // Add saved items
+    items.forEach(itemData => {
+        const newItem = document.createElement('div');
+        newItem.className = 'timeline-item';
+        
+        let linkHtml = '';
+        if (itemData.link) {
+            linkHtml = `<a href="${itemData.link}" target="_blank" class="timeline-link">פתח ב-Google Maps</a>`;
+        }
+        
+        newItem.innerHTML = `
+            <div class="timeline-dot"></div>
+            <div class="timeline-time">${itemData.time}</div>
+            <div class="timeline-content">
+                <p>${itemData.description}</p>
+                ${linkHtml}
+            </div>
+        `;
+        
+        const timelineLine = container.querySelector('.timeline-line');
+        timelineLine.insertAdjacentElement('afterend', newItem);
+    });
+    
+    // Update timeline after loading
+    setTimeout(() => {
+        updateTimeline();
+    }, 200);
 }
 
 // Initialize on page load
