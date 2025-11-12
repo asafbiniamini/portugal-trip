@@ -1,52 +1,121 @@
-// Surf Spots Data
+// Surf Spots Data - Algarve (דרום פורטוגל)
 const surfSpotsData = [
     {
         spot: "Arrifana (Aljezur)",
-        date_snapshot: "2025-11-08",
-        predicted_for_2025_11_13: "Largest open-ocean swell predicted on Thu 13 Nov — up to ~3.5 m in nearby time windows",
+        date_snapshot: "2025-11-15",
+        predicted_for_2025_11_13: "הספוט המפורסם ביותר באזור Aljezur. מוגן על ידי צוקים גדולים, מה שמגן על הגלים כשיש רוח. גלים עקביים וטובים.",
         level: "Intermediate-Advanced",
         best_time: "Morning",
         location: "Aljezur, Costa Vicentina",
-        swell_quality: "Excellent (3.5m)",
-        recommendation: "⭐⭐⭐⭐⭐ מומלץ מאוד ל-13 בנובמבר - הגלים הכי טובים!",
+        swell_quality: "Excellent - מוגן מרוח",
+        recommendation: "⭐⭐⭐⭐⭐ הספוט הטוב ביותר ב-Aljezur! מוגן מרוח, גלים עקביים",
         map_url: "https://www.google.com/maps/search/Arrifana+Beach+Aljezur",
-        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800"
+        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+        description: "מפרץ מוגן על ידי צוקים גדולים. גלים עקביים, מוגן מרוח. כמה דקות מ-Arrifana תמצאו Monte Clérigo ו-Praia do Amoreira."
+    },
+    {
+        spot: "Monte Clérigo (Aljezur)",
+        date_snapshot: "2025-11-15",
+        predicted_for_2025_11_13: "חוף יפה בין שני גבעות. נדיר לראות אותו צפוף מדי. גלים טובים לעיתים קרובות.",
+        level: "Intermediate",
+        best_time: "Morning-Afternoon",
+        location: "Aljezur, Costa Vicentina",
+        swell_quality: "Good - פחות צפוף",
+        recommendation: "⭐⭐⭐⭐ חוף יפה, פחות צפוף מ-Arrifana",
+        map_url: "https://www.google.com/maps/search/Monte+Clérigo+Beach",
+        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+        description: "חוף יפה בין שני גבעות. זרמים ואבנים במים הופכים אותו לפחות מתאים למתחילים מ-Arrifana."
+    },
+    {
+        spot: "Praia do Amoreira (Aljezur)",
+        date_snapshot: "2025-11-15",
+        predicted_for_2025_11_13: "חוף חול רחב עם ליין-אפ ריק יחסית. שרטוני החול משתנים, מה שהופך את הספוט לפחות עקבי. כדאי לבדוק מדי פעם.",
+        level: "All levels",
+        best_time: "Morning-Afternoon",
+        location: "Aljezur, Costa Vicentina",
+        swell_quality: "Variable - כדאי לבדוק",
+        recommendation: "⭐⭐⭐ חוף רחב, פחות צפוף, גלים משתנים",
+        map_url: "https://www.google.com/maps/search/Praia+do+Amoreira",
+        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+        description: "חוף רחב בתוך פארק לאומי. שרטוני החול משתנים, מה שהופך את הספוט לפחות עקבי, אבל יכול לייצר גלים טובים מאוד."
+    },
+    {
+        spot: "Beliche (Sagres)",
+        date_snapshot: "2025-11-15",
+        predicted_for_2025_11_13: "מוגן יחסית מרוח צפונית (Nortada). גלים A-frame שנוטים לשבור חלולים. לא מתאים למתחילים בגלל זרמים.",
+        level: "Intermediate-Advanced",
+        best_time: "Morning-Afternoon",
+        location: "Sagres, Algarve",
+        swell_quality: "Very Good - מוגן מרוח",
+        recommendation: "⭐⭐⭐⭐ מוגן מרוח, גלים חלולים, לא למתחילים",
+        map_url: "https://www.google.com/maps/search/Beliche+Beach+Sagres",
+        image: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800",
+        description: "מוגן יחסית מרוח צפונית. גלים A-frame חלולים. גם טוב ל-bodyboarders. לא מתאים למתחילים בגלל זרמים."
+    },
+    {
+        spot: "Zavial (Sagres)",
+        date_snapshot: "2025-11-15",
+        predicted_for_2025_11_13: "פוטנציאל לייצר חלק מהגלים הטובים ביותר באזור. צריך סוואל גדול יותר ממערב או דרום. גלים מהירים וחלולים.",
+        level: "Advanced",
+        best_time: "Morning",
+        location: "Northeast of Sagres, Algarve",
+        swell_quality: "Excellent - עם סוואל גדול",
+        recommendation: "⭐⭐⭐⭐⭐ גלים מעולים עם סוואל גדול - יכול להיות צפוף!",
+        map_url: "https://www.google.com/maps/search/Zavial+Beach+Sagres",
+        image: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800",
+        description: "כמה קילומטרים צפון-מזרחית מ-Sagres. גלים מהירים וחלולים. כשהתנאים טובים, יכול להיות צפוף עם מקומיים. שימו לב לכללי הגלישה!"
+    },
+    {
+        spot: "Cordoama (West Coast)",
+        date_snapshot: "2025-11-15",
+        predicted_for_2025_11_13: "חוף ציורי! גלים נוטים לשבור ב-A-frame קלאסי ועקבי למדי. גולשים ברמות שונות יכולים ליהנות כאן.",
+        level: "All levels",
+        best_time: "Morning-Afternoon",
+        location: "West Coast, Algarve",
+        swell_quality: "Consistent - A-frame",
+        recommendation: "⭐⭐⭐⭐ גלים עקביים, מתאים לכל הרמות",
+        map_url: "https://www.google.com/maps/search/Cordoama+Beach",
+        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+        description: "חוף ציורי. גלים A-frame קלאסיים ועקביים. מתאים לגולשים ברמות שונות."
+    },
+    {
+        spot: "Praia do Amado (Carrapateira)",
+        date_snapshot: "2025-11-15",
+        predicted_for_2025_11_13: "המקום להיות - לא רק למתחילים! גם למטיילים שרוצים קפה או בירה תוך צפייה בשקיעה. גלים גם לבינוניים.",
+        level: "All levels",
+        best_time: "Morning",
+        location: "Carrapateira, Costa Vicentina",
+        swell_quality: "Consistent - טוב למתחילים ובינוניים",
+        recommendation: "⭐⭐⭐⭐ מושלם למתחילים, גם בינוניים ימצאו גלים",
+        map_url: "https://www.google.com/maps/search/Praia+do+Amado+Carrapateira",
+        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+        description: "מושלם למתחילים אבל גם בינוניים ימצאו גלים. מקום נהדר לשקיעה עם קפה או בירה."
     },
     {
         spot: "Tonel (Sagres)",
-        date_snapshot: "2025-11-08",
-        predicted_for_2025_11_13: "Significant swell windows with strong swells and long periods",
-        level: "All levels",
+        date_snapshot: "2025-11-15",
+        predicted_for_2025_11_13: "עובד עם סוואל גדול מדרום. גלים נוטים לסגור, אז צריך קצת מזל. לא תמיד עובד.",
+        level: "Intermediate-Advanced",
         best_time: "Morning-Early afternoon",
         location: "Sagres, Algarve",
-        swell_quality: "Very Good (strong swells, long periods)",
-        recommendation: "⭐⭐⭐⭐ מומלץ - גלים חזקים עם תקופות ארוכות",
+        swell_quality: "Variable - צריך סוואל גדול מדרום",
+        recommendation: "⭐⭐⭐ עובד רק עם סוואל גדול מדרום",
         map_url: "https://www.google.com/maps/search/Tonel+Beach+Sagres",
-        image: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800"
+        image: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800",
+        description: "עובד עם סוואל גדול מדרום. גלים נוטים לסגור, אז צריך קצת מזל."
     },
     {
         spot: "Playa de Lagos (Lagos)",
-        date_snapshot: "2025-11-08",
-        predicted_for_2025_11_13: "Primary swell ~0.4 m (1.3 ft) @ 10s; Secondary ~0.6 m @ 6s; glassy wind as swell arrives (evening)",
+        date_snapshot: "2025-11-15",
+        predicted_for_2025_11_13: "גלים קטנים יותר, טוב למתחילים. רוח טובה בערב.",
         level: "Beginner-Intermediate",
         best_time: "Evening",
         location: "Lagos, Algarve",
         swell_quality: "Moderate (0.4-0.6m)",
-        recommendation: "⭐⭐⭐ טוב למתחילים - גלים קטנים יותר, רוח טובה בערב",
+        recommendation: "⭐⭐⭐ טוב למתחילים - גלים קטנים יותר",
         map_url: "https://www.google.com/maps/search/Playa+de+Lagos",
-        image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800"
-    },
-    {
-        spot: "Praia do Amado (Carrapateira)",
-        date_snapshot: "2025-11-08",
-        predicted_for_2025_11_13: "Consistent waves, good for all levels",
-        level: "All levels",
-        best_time: "Morning",
-        location: "Carrapateira, Costa Vicentina",
-        swell_quality: "Consistent",
-        recommendation: "⭐⭐⭐⭐ טוב לכל הרמות - גלים עקביים",
-        map_url: "https://www.google.com/maps/search/Praia+do+Amado+Carrapateira",
-        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800"
+        image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800",
+        description: "גלים קטנים יותר, מושלם למתחילים. רוח טובה בערב."
     }
 ];
 
@@ -78,9 +147,10 @@ function loadSurfSpots() {
                 <div class="forecast-content">
                     <h3>🌊 תחזית גלים</h3>
                     <div class="forecast-item">
-                        <strong>תחזית ל-13 בנובמבר:</strong>
+                        <strong>מידע על הספוט:</strong>
                         <p>${spot.predicted_for_2025_11_13}</p>
                     </div>
+                    ${spot.description ? `<div class="forecast-item"><strong>תיאור:</strong><p>${spot.description}</p></div>` : ''}
                     <div class="forecast-item">
                         <strong>איכות הגלים:</strong>
                         <p>${spot.swell_quality}</p>

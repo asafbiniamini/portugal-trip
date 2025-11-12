@@ -36,23 +36,25 @@ const tripData = {
             date: "2025-11-14",
             dayNumber: 2,
             activities: [
-                { time: "08:00", description: "גלישה ב-Tonel (Sagres) או Praia do Amado", link: "https://www.google.com/maps/search/Tonel+Beach+Sagres" },
-                { time: "12:00", description: "ארוחה ב-Restaurante O Infante (Sagres)", link: "https://www.google.com/maps/search/Restaurante+O+Infante+Sagres" },
-                { time: "15:00", description: "ביקור ב-Sagres - כף סנט וינסנט (הנקודה הדרומית-מערבית ביותר באירופה)", link: "https://www.google.com/maps/search/Cape+St+Vincent+Sagres" },
-                { time: "18:00", description: "חזרה ל-Lagos, טעימת יין ב-Wine Bar do Castelo או Adega do Cantor", link: "https://www.google.com/maps/search/Wine+Bar+do+Castelo+Lagos" },
-                { time: "20:00", description: "ארוחת ערב: A Tasca (טעימות + יין)", link: "https://www.google.com/maps/search/A+Tasca+Lagos" }
+                { time: "08:00", description: "נסיעה מליסבון ל-Aljezur (כ-2.5 שעות)", link: "https://www.google.com/maps/dir/Lisbon/Aljezur" },
+                { time: "11:00", description: "הגעה ל-Aljezur, התארגנות והתמקמות", link: "https://www.google.com/maps/search/hotels+Aljezur" },
+                { time: "12:00", description: "ארוחת צהריים ב-Restaurante O Paulo או מסעדה מקומית ב-Aljezur", link: "https://www.google.com/maps/search/Restaurante+O+Paulo+Aljezur" },
+                { time: "14:00", description: "גלישה ראשונה ב-Arrifana - הספוט המפורסם של Aljezur (מוגן מרוח, גלים טובים)", link: "https://www.google.com/maps/search/Arrifana+Beach+Aljezur" },
+                { time: "18:00", description: "שקיעה ב-Arrifana", link: "https://www.google.com/maps/search/Arrifana+Beach+Aljezur" },
+                { time: "20:00", description: "ארוחת ערב ב-Restaurante O Paulo או A Tasca do Mar (מסעדות מומלצות ב-Aljezur)", link: "https://www.google.com/maps/search/Restaurante+O+Paulo+Aljezur" }
             ],
-            surfSpot: "Tonel או Praia do Amado",
-            restaurant: "Restaurante O Infante (צהריים), A Tasca (ערב)",
-            wine: "Wine Bar do Castelo או Adega do Cantor",
+            surfSpot: "Arrifana",
+            restaurant: "Restaurante O Paulo / A Tasca do Mar",
+            accommodation: "Aljezur",
             links: [
-                { name: "Sagres - Cape St. Vincent", url: "https://www.google.com/maps/search/Cape+St+Vincent+Sagres" },
-                { name: "Restaurante O Infante", url: "https://www.google.com/maps/search/Restaurante+O+Infante+Sagres" },
-                { name: "Tonel Beach", url: "https://www.google.com/maps/search/Tonel+Beach+Sagres" }
+                { name: "Arrifana Beach", url: "https://www.google.com/maps/search/Arrifana+Beach+Aljezur" },
+                { name: "Restaurante O Paulo", url: "https://www.google.com/maps/search/Restaurante+O+Paulo+Aljezur" },
+                { name: "A Tasca do Mar", url: "https://www.google.com/maps/search/A+Tasca+do+Mar+Aljezur" },
+                { name: "Aljezur", url: "https://www.google.com/maps/search/Aljezur+Portugal" }
             ],
             images: [
-                "https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800",
-                "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800"
+                "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+                "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800"
             ]
         },
         {
@@ -60,19 +62,23 @@ const tripData = {
             date: "2025-11-15",
             dayNumber: 3,
             activities: [
-                { time: "07:00", description: "יום טבע! - Costa Vicentina Natural Park", link: "https://www.google.com/maps/search/Costa+Vicentina+Natural+Park" },
-                { time: "08:00", description: "נסיעה ל-Aljezur", link: "https://www.google.com/maps/search/Aljezur+Portugal" },
-                { time: "09:00", description: "הליכה במסלול החוף של Costa Vicentina (מסלול Arrifana או Praia do Amado)", link: "https://www.google.com/maps/search/Arrifana+Beach+Aljezur" },
-                { time: "13:00", description: "פיקניק או ארוחה במסעדה מקומית באזור", link: "https://www.google.com/maps/search/restaurants+Aljezur" },
-                { time: "15:00", description: "המשך הליכה או ביקור ב-Monchique Mountains (נסיעה של שעה)", link: "https://www.google.com/maps/search/Monchique+Mountains" },
-                { time: "19:00", description: "חזרה ל-Lagos, ארוחת ערב ב-Adega Vila Lisa", link: "https://www.google.com/maps/search/Adega+Vila+Lisa+Lagos" }
+                { time: "08:00", description: "גלישה בוקר ב-Arrifana או Monte Clérigo", link: "https://www.google.com/maps/search/Arrifana+Beach+Aljezur" },
+                { time: "12:00", description: "ארוחת צהריים ב-Café Arrifana או מסעדה מקומית", link: "https://www.google.com/maps/search/Café+Arrifana" },
+                { time: "14:00", description: "בדיקת ספוטים נוספים: Monte Clérigo או Amoreira (דקות ספורות נסיעה)", link: "https://www.google.com/maps/search/Monte+Clérigo+Beach" },
+                { time: "15:00", description: "גלישה נוספת או הליכה במסלול החוף של Costa Vicentina", link: "https://www.google.com/maps/search/Costa+Vicentina+Natural+Park" },
+                { time: "18:00", description: "שקיעה ב-Arrifana או Monte Clérigo", link: "https://www.google.com/maps/search/Arrifana+Beach+Aljezur" },
+                { time: "20:00", description: "ארוחת ערב ב-Restaurante O Paulo או A Tasca do Mar", link: "https://www.google.com/maps/search/Restaurante+O+Paulo+Aljezur" }
             ],
-            natureSpot: "Costa Vicentina Natural Park + Monchique Mountains",
-            restaurant: "Adega Vila Lisa",
+            surfSpot: "Arrifana, Monte Clérigo, Amoreira",
+            natureSpot: "Costa Vicentina Natural Park",
+            restaurant: "Restaurante O Paulo / A Tasca do Mar",
+            accommodation: "Aljezur",
             links: [
+                { name: "Arrifana Beach", url: "https://www.google.com/maps/search/Arrifana+Beach+Aljezur" },
+                { name: "Monte Clérigo Beach", url: "https://www.google.com/maps/search/Monte+Clérigo+Beach" },
+                { name: "Praia do Amoreira", url: "https://www.google.com/maps/search/Praia+do+Amoreira" },
                 { name: "Costa Vicentina Natural Park", url: "https://www.google.com/maps/search/Costa+Vicentina+Natural+Park" },
-                { name: "Monchique Mountains", url: "https://www.google.com/maps/search/Monchique+Mountains" },
-                { name: "Adega Vila Lisa", url: "https://www.google.com/maps/search/Adega+Vila+Lisa+Lagos" }
+                { name: "Restaurante O Paulo", url: "https://www.google.com/maps/search/Restaurante+O+Paulo+Aljezur" }
             ],
             images: [
                 "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
@@ -84,24 +90,24 @@ const tripData = {
             date: "2025-11-16",
             dayNumber: 4,
             activities: [
-                { time: "08:00", description: "גלישה ב-Playa de Lagos או Praia do Amado", link: "https://www.google.com/maps/search/Playa+de+Lagos" },
-                { time: "14:00", description: "סיור ב-Ponta da Piedade (סירה או קיאק)", link: "https://www.google.com/maps/search/Ponta+da+Piedade+Lagos" },
-                { time: "15:30", description: "ארוחה ב-O Camilo או מסעדה אחרת ב-Lagos", link: "https://www.google.com/maps/search/O+Camilo+Lagos" },
-                { time: "17:00", description: "ביקור ביקב Quinta do Francês (טעימות יין)", link: "https://www.google.com/maps/search/Quinta+do+Francês+Lagos" },
-                { time: "20:00", description: "ארוחת ערב ב-Quinta do Francês (יש להם גם מסעדה)", link: "https://www.google.com/maps/search/Quinta+do+Francês+Lagos" }
+                { time: "08:00", description: "גלישה בוקר - Arrifana, Monte Clérigo או Amoreira (לפי תנאי הגלים)", link: "https://www.google.com/maps/search/Arrifana+Beach+Aljezur" },
+                { time: "12:00", description: "ארוחת צהריים ב-Café Arrifana או מסעדה מקומית", link: "https://www.google.com/maps/search/Café+Arrifana" },
+                { time: "14:00", description: "יום טבע - הליכה במסלול החוף של Costa Vicentina או ביקור ב-Monchique Mountains", link: "https://www.google.com/maps/search/Costa+Vicentina+Natural+Park" },
+                { time: "17:00", description: "חזרה ל-Aljezur, זמן חופשי", link: "https://www.google.com/maps/search/Aljezur+Portugal" },
+                { time: "20:00", description: "ארוחת ערב ב-Restaurante O Paulo או A Tasca do Mar", link: "https://www.google.com/maps/search/Restaurante+O+Paulo+Aljezur" }
             ],
-            surfSpot: "Playa de Lagos או Praia do Amado",
-            natureSpot: "Ponta da Piedade",
-            wine: "Quinta do Francês",
-            restaurant: "Quinta do Francês",
+            surfSpot: "Arrifana, Monte Clérigo, Amoreira",
+            natureSpot: "Costa Vicentina Natural Park / Monchique Mountains",
+            restaurant: "Restaurante O Paulo / A Tasca do Mar",
+            accommodation: "Aljezur",
             links: [
-                { name: "Ponta da Piedade", url: "https://www.google.com/maps/search/Ponta+da+Piedade+Lagos" },
-                { name: "Quinta do Francês", url: "https://www.google.com/maps/search/Quinta+do+Francês+Lagos" },
-                { name: "Lagos Beach", url: "https://www.google.com/maps/search/Playa+de+Lagos" }
+                { name: "Costa Vicentina Natural Park", url: "https://www.google.com/maps/search/Costa+Vicentina+Natural+Park" },
+                { name: "Monchique Mountains", url: "https://www.google.com/maps/search/Monchique+Mountains" },
+                { name: "Restaurante O Paulo", url: "https://www.google.com/maps/search/Restaurante+O+Paulo+Aljezur" }
             ],
             images: [
-                "https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800",
-                "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800"
+                "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800",
+                "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800"
             ]
         },
         {
@@ -109,24 +115,26 @@ const tripData = {
             date: "2025-11-17",
             dayNumber: 5,
             activities: [
-                { time: "08:00", description: "גלישה ב-Arrifana או Tonel (לפי תנאי הגלים)", link: "https://www.google.com/maps/search/Arrifana+Beach+Aljezur" },
-                { time: "13:00", description: "נסיעה ל-Ria Formosa Natural Park (כ-45 דקות מלוגוס)", link: "https://www.google.com/maps/search/Ria+Formosa+Natural+Park" },
-                { time: "14:30", description: "סיור ב-Ria Formosa (סירה או קיאק) - ציפורים, לגונות, איים", link: "https://www.google.com/maps/search/Ria+Formosa+boat+tour" },
-                { time: "19:00", description: "נסיעה ל-Albufeira, ארוחת ערב ב-Dom Carlos (4.5⭐) - מומלץ להזמין מראש!", link: "https://www.google.com/maps/search/Dom+Carlos+Albufeira" },
-                { time: "21:30", description: "אחרי הארוחה: יין ב-Adega do Cantor (יקב של קליף ריצ'רד, 4.4⭐)", link: "https://www.google.com/maps/search/Adega+do+Cantor+Albufeira" }
+                { time: "08:00", description: "גלישה אחרונה ב-Aljezur - Arrifana או Monte Clérigo", link: "https://www.google.com/maps/search/Arrifana+Beach+Aljezur" },
+                { time: "12:00", description: "ארוחת צהריים אחרונה ב-Aljezur", link: "https://www.google.com/maps/search/restaurants+Aljezur" },
+                { time: "14:00", description: "נסיעה מ-Aljezur ל-Lagos (כ-45 דקות)", link: "https://www.google.com/maps/dir/Aljezur/Lagos" },
+                { time: "15:00", description: "התארגנות ב-Lagos, התמקמות", link: "https://www.google.com/maps/search/hotels+Lagos+Portugal" },
+                { time: "16:00", description: "סיור ב-Ponta da Piedade (סירה או קיאק) - צוקים מדהימים", link: "https://www.google.com/maps/search/Ponta+da+Piedade+Lagos" },
+                { time: "20:00", description: "ארוחת ערב ב-Lagos - O Camilo או Restaurante Don Sebastião", link: "https://www.google.com/maps/search/O+Camilo+Lagos" }
             ],
-            surfSpot: "Arrifana או Tonel",
-            natureSpot: "Ria Formosa Natural Park",
-            restaurant: "Dom Carlos (4.5⭐ - מומלץ מאוד!)",
-            wine: "Adega do Cantor (4.4⭐)",
+            surfSpot: "Arrifana / Monte Clérigo (בוקר)",
+            natureSpot: "Ponta da Piedade",
+            restaurant: "O Camilo / Restaurante Don Sebastião",
+            accommodation: "Lagos",
             links: [
-                { name: "Ria Formosa Natural Park", url: "https://www.google.com/maps/search/Ria+Formosa+Natural+Park" },
-                { name: "Dom Carlos Restaurant", url: "https://www.google.com/maps/search/Dom+Carlos+Albufeira" },
-                { name: "Adega do Cantor", url: "https://www.google.com/maps/search/Adega+do+Cantor+Albufeira" }
+                { name: "Ponta da Piedade", url: "https://www.google.com/maps/search/Ponta+da+Piedade+Lagos" },
+                { name: "O Camilo", url: "https://www.google.com/maps/search/O+Camilo+Lagos" },
+                { name: "Restaurante Don Sebastião", url: "https://www.google.com/maps/search/Restaurante+Don+Sebastião+Lagos" },
+                { name: "Lagos", url: "https://www.google.com/maps/search/Lagos+Portugal" }
             ],
             images: [
-                "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800",
-                "https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800"
+                "https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800",
+                "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800"
             ]
         },
         {
@@ -134,26 +142,25 @@ const tripData = {
             date: "2025-11-18",
             dayNumber: 6,
             activities: [
-                { time: "08:00", description: "גלישה ב-Praia do Amado או Tonel", link: "https://www.google.com/maps/search/Praia+do+Amado+Carrapateira" },
-                { time: "13:00", description: "מסלול Seven Hanging Valleys Trail (כ-30 דקות מלוגוס)", link: "https://www.google.com/maps/search/Seven+Hanging+Valleys+Trail+Lagoa" },
-                { time: "13:30", description: "הליכה במסלול החוף המדהים (3-4 שעות)", link: "https://www.google.com/maps/search/Seven+Hanging+Valleys+Trail" },
-                { time: "16:30", description: "ארוחה באזור Carvoeiro/Lagoa", link: "https://www.google.com/maps/search/restaurants+Carvoeiro" },
-                { time: "17:30", description: "ביקור ביקב Quinta dos Vales (סיור וטעימות, 4.5⭐)", link: "https://www.google.com/maps/search/Quinta+dos+Vales+Estômbar" },
-                { time: "20:00", description: "ארוחת ערב מיוחדת ב-Bon Bon (4.7⭐, Carvoeiro) או Vila Joya (2 כוכבי מישלן, Albufeira) - הזמינו מראש!", link: "https://www.google.com/maps/search/Bon+Bon+Carvoeiro" }
+                { time: "08:00", description: "גלישה ב-Lagos - Playa de Lagos או Praia do Amado", link: "https://www.google.com/maps/search/Playa+de+Lagos" },
+                { time: "12:00", description: "ארוחת צהריים ב-O Camilo או Casinha do Petisco (מסעדות מומלצות ב-Lagos)", link: "https://www.google.com/maps/search/O+Camilo+Lagos" },
+                { time: "14:00", description: "ביקור ביקב Quinta do Francês (סיור וטעימות יין)", link: "https://www.google.com/maps/search/Quinta+do+Francês+Lagos" },
+                { time: "16:00", description: "זמן חופשי ב-Lagos - טיול בעיר העתיקה או חוף", link: "https://www.google.com/maps/search/Lagos+old+town" },
+                { time: "20:00", description: "ארוחת ערב ב-Restaurante Don Sebastião או A Tasca (טעימות + יין)", link: "https://www.google.com/maps/search/Restaurante+Don+Sebastião+Lagos" }
             ],
-            surfSpot: "Praia do Amado או Tonel",
-            natureSpot: "Seven Hanging Valleys Trail",
-            wine: "Quinta dos Vales (4.5⭐)",
-            restaurant: "Bon Bon (4.7⭐ - מומלץ מאוד!) או Vila Joya (2 Michelin stars)",
+            surfSpot: "Playa de Lagos / Praia do Amado",
+            wine: "Quinta do Francês",
+            restaurant: "Restaurante Don Sebastião / A Tasca / O Camilo",
+            accommodation: "Lagos",
             links: [
-                { name: "Seven Hanging Valleys Trail", url: "https://www.google.com/maps/search/Seven+Hanging+Valleys+Trail+Lagoa" },
-                { name: "Bon Bon Restaurant", url: "https://www.google.com/maps/search/Bon+Bon+Carvoeiro" },
-                { name: "Quinta dos Vales", url: "https://www.google.com/maps/search/Quinta+dos+Vales+Estômbar" },
-                { name: "Vila Joya", url: "https://www.google.com/maps/search/Vila+Joya+Albufeira" }
+                { name: "Quinta do Francês", url: "https://www.google.com/maps/search/Quinta+do+Francês+Lagos" },
+                { name: "Restaurante Don Sebastião", url: "https://www.google.com/maps/search/Restaurante+Don+Sebastião+Lagos" },
+                { name: "A Tasca", url: "https://www.google.com/maps/search/A+Tasca+Lagos" },
+                { name: "O Camilo", url: "https://www.google.com/maps/search/O+Camilo+Lagos" }
             ],
             images: [
-                "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800",
-                "https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800"
+                "https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800",
+                "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800"
             ]
         },
         {
@@ -161,20 +168,24 @@ const tripData = {
             date: "2025-11-19",
             dayNumber: 7,
             activities: [
-                { time: "08:00", description: "גלישה אחרונה - בחרו את הספוט האהוב עליכם", link: "https://www.google.com/maps/search/surf+spots+Algarve" },
-                { time: "13:00", description: "קניות יין ב-Adega do Cantor או Wine Bar do Castelo", link: "https://www.google.com/maps/search/Adega+do+Cantor+Albufeira" },
-                { time: "14:00", description: "ארוחה אחרונה ב-Adega Vila Lisa או מסעדה אחרת שתאהבו", link: "https://www.google.com/maps/search/Adega+Vila+Lisa+Lagos" },
-                { time: "16:00", description: "זמן חופשי - עוד ביקור במקום שאהבתם, או פשוט להירגע" },
-                { time: "20:00", description: "ארוחת ערב אחרונה + יין מקומי", link: "https://www.google.com/maps/search/best+restaurants+Lagos" }
+                { time: "08:00", description: "גלישה אחרונה - בחרו את הספוט האהוב עליכם", link: "https://www.google.com/maps/search/surf+spots+Lagos" },
+                { time: "12:00", description: "מסלול Seven Hanging Valleys Trail (כ-30 דקות מ-Lagos) - הליכה במסלול החוף המדהים", link: "https://www.google.com/maps/search/Seven+Hanging+Valleys+Trail+Lagoa" },
+                { time: "16:00", description: "ארוחה באזור Carvoeiro/Lagoa", link: "https://www.google.com/maps/search/restaurants+Carvoeiro" },
+                { time: "17:30", description: "ביקור ביקב Quinta dos Vales (סיור וטעימות, 4.5⭐)", link: "https://www.google.com/maps/search/Quinta+dos+Vales+Estômbar" },
+                { time: "20:00", description: "ארוחת ערב מיוחדת ב-Bon Bon (4.7⭐, Carvoeiro) - הזמינו מראש!", link: "https://www.google.com/maps/search/Bon+Bon+Carvoeiro" }
             ],
             surfSpot: "בחירה חופשית",
-            restaurant: "Adega Vila Lisa או בחירה חופשית",
-            wine: "קניות יין",
+            natureSpot: "Seven Hanging Valleys Trail",
+            wine: "Quinta dos Vales (4.5⭐)",
+            restaurant: "Bon Bon (4.7⭐ - מומלץ מאוד!)",
+            accommodation: "Lagos",
             links: [
-                { name: "Adega do Cantor", url: "https://www.google.com/maps/search/Adega+do+Cantor+Albufeira" },
-                { name: "Wine Bar do Castelo", url: "https://www.google.com/maps/search/Wine+Bar+do+Castelo+Lagos" }
+                { name: "Seven Hanging Valleys Trail", url: "https://www.google.com/maps/search/Seven+Hanging+Valleys+Trail+Lagoa" },
+                { name: "Bon Bon Restaurant", url: "https://www.google.com/maps/search/Bon+Bon+Carvoeiro" },
+                { name: "Quinta dos Vales", url: "https://www.google.com/maps/search/Quinta+dos+Vales+Estômbar" }
             ],
             images: [
+                "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800",
                 "https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800"
             ]
         },

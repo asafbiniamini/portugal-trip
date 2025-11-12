@@ -65,7 +65,7 @@ function updateSurfForecasts() {
     window.open(mainUrl, '_blank');
     
     // Also open individual searches for each spot
-    const spots = ['Arrifana', 'Tonel', 'Lagos', 'Praia do Amado'];
+    const spots = ['Arrifana', 'Monte Clérigo', 'Amoreira', 'Beliche', 'Zavial', 'Cordoama', 'Praia do Amado', 'Tonel', 'Lagos'];
     
     // Open in sequence (with small delay to avoid popup blocker)
     spots.forEach((spot, index) => {
@@ -87,9 +87,14 @@ function getMagicSeaweedUrl(spotName) {
     // URLs to Magic Seaweed search pages - these will work from anywhere!
     const spotMap = {
         'Arrifana': 'https://magicseaweed.com/search/?q=Arrifana+Aljezur',
+        'Monte Clérigo': 'https://magicseaweed.com/search/?q=Monte+Clérigo+Aljezur',
+        'Amoreira': 'https://magicseaweed.com/search/?q=Praia+do+Amoreira+Aljezur',
+        'Beliche': 'https://magicseaweed.com/search/?q=Beliche+Sagres',
+        'Zavial': 'https://magicseaweed.com/search/?q=Zavial+Sagres',
+        'Cordoama': 'https://magicseaweed.com/search/?q=Cordoama+Portugal',
+        'Praia do Amado': 'https://magicseaweed.com/search/?q=Praia+do+Amado+Carrapateira',
         'Tonel': 'https://magicseaweed.com/search/?q=Tonel+Sagres',
-        'Lagos': 'https://magicseaweed.com/search/?q=Lagos+Portugal',
-        'Praia do Amado': 'https://magicseaweed.com/search/?q=Praia+do+Amado+Carrapateira'
+        'Lagos': 'https://magicseaweed.com/search/?q=Lagos+Portugal'
     };
     return spotMap[spotName] || 'https://magicseaweed.com/Algarve-Surf-Forecast/12/';
 }
